@@ -1,6 +1,7 @@
 ---
 import data from "../data.json";
 import AppCard from "../components/AppCard.astro";
+import "../styles.css";
 export function getStaticPaths() {
   return data.map((product) => {
     return {
