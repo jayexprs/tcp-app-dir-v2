@@ -1,0 +1,18 @@
+---
+import AppCard from "./AppCard.astro";
+const { product } = Astro.props;
+const { apps } = product;
+---
+
+<forge-card class="preview__card">
+  <forge-toolbar>
+    <div slot="start" class="product-name-container">
+      <forge-icon name="app_registration" external id="app-icon-preview"
+      ></forge-icon>
+      <h2 slot="start" class="forge-typography--title">{product.name}</h2>
+    </div>
+  </forge-toolbar>
+  <div class="preview__body" id="app-card-grid">
+    <AppCard name={apps[0].name} description={apps[0].description} />
+  </div>
+</forge-card>

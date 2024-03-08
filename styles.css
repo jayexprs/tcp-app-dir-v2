@@ -42,7 +42,8 @@ body {
 main {
   padding: 48px;
   justify-content: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 800px;
   height: 100%;
   max-width: 1024px;
   width: 100%;

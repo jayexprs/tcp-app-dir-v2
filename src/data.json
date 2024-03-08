@@ -1,0 +1,32 @@
+{
+  "Energov": {
+      "name": "Energov",
+      "apps": [
+        {
+          "name": "License set up",
+          "description": "Set up Licenses"
+        },
+        {
+          "name": "Permits set up",
+          "description": "Set up Permits"
+        },
+        {
+          "name": "Inspections set up",
+          "description": "Set up Inspections"
+        }
+      ]
+  },
+  "Employee Access": {
+      "name": "Employee Access",
+      "apps": [
+        {
+          "name": "Employee Access",
+          "description": "Request PTO"
+        },
+        {
+          "name": "Employee Access Admin",
+          "description": "Administer Employee Access"
+        }
+      ]
+  }
+}
