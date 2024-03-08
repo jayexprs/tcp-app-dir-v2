@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  background: url('https://www.itl.cat/pngfile/big/212-2125505_3840-x-material-design-light-gray.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body {
+  opacity: 1;
+  background-blend-mode: lighten;
+}
+
+main {
+  padding: 48px;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-name-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.preview__card {
+  width: 100%;
+  --forge-card-padding: 0;
+  height: min-content;
+}
+
+.preview__body {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.app__body {
+  padding-inline: 8px;
+  display: grid;
+  gap: 4px;
+  margin-block-end: 8px;
+}
+
+.app__features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.app__icon-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 8px;
+  padding-block: 4px;
+  gap: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
