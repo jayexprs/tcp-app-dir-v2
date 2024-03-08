@@ -1,6 +1,7 @@
 ---
 import AppCard from "./AppCard.astro";
 const { product } = Astro.props;
+const productPath = product.name.toLowerCase().split(" ").join("-");
 const { apps } = product;
 ---
 
@@ -9,7 +10,15 @@ const { apps } = product;
     <div slot="start" class="product-name-container">
       <forge-icon name="app_registration" external id="app-icon-preview"
       ></forge-icon>
-      <h2 slot="start" class="forge-typography--title">{product.name}</h2>
+      <h2 slot="start" class="forge-typography--title">
+        {product.name}
+      </h2>
+    </div>
+    <div slot="end">
+      <a href={productPath}>
+        <forge-icon name="chevron_right" external id="app-icon-preview"
+        ></forge-icon>
+      </a>
     </div>
   </forge-toolbar>
   <div class="preview__body" id="app-card-grid">
@@ -20,3 +29,8 @@ const { apps } = product;
     }
   </div>
 </forge-card>
+<style>
+  a {
+    color: #333;
+  }
+</style>
