@@ -38,14 +38,17 @@ import data from "../data.json";
 
   <body class="forge-typography">
     <forge-scaffold class="scaffold-example">
-      <forge-app-bar title-text="TCP - App Registration" slot="header">
+      <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
       </forge-app-bar>
       <div slot="body">
         <main>
-          <ProductCard product={data.Energov} />
-          <ProductCard product={data["Employee Access"]} />
+          {
+            Object.keys(data).map((product) => (
+              <ProductCard product={data[product]} />
+            ))
+          }
         </main>
-        <script src="../../src/pages/script.js"></script>
+
         <script
           type="module"
           src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"

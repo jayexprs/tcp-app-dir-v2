@@ -1,4 +1,21 @@
 {
+  "Payments": {
+    "name": "Payments",
+    "apps": [
+      {
+        "name": "Payments Administration",
+        "description": "Schedule payments"
+      },
+      {
+        "name": "Batch Integration",
+        "description": "Combine batches of payments"
+      },
+      {
+        "name": "Permissions",
+        "description": "Manage roles for Payments users"
+      }
+    ]
+  },
   "Energov": {
       "name": "Energov",
       "apps": [
@@ -28,5 +45,22 @@
           "description": "Administer Employee Access"
         }
       ]
+  },
+  "Platform Admin": {
+    "name": "System Admin",
+    "apps": [
+      {
+        "name": "Admin Center",
+        "description": "Administer your Tyler solutions"
+      },
+      {
+        "name": "Community Access Profile Manager",
+        "description": "Administer community members' access"
+      },
+      {
+        "name": "Brand Manager",
+        "description": "Manage the styles used by your Tyler solutions"
+      }
+    ]
   }
 }

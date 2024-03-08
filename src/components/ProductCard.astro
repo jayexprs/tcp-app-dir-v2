@@ -13,6 +13,10 @@ const { apps } = product;
     </div>
   </forge-toolbar>
   <div class="preview__body" id="app-card-grid">
-    <AppCard name={apps[0].name} description={apps[0].description} />
+    {
+      apps.map((app) => (
+        <AppCard name={app.name} description={app.description} />
+      ))
+    }
   </div>
 </forge-card>

@@ -43,6 +43,7 @@ main {
   padding: 48px;
   justify-content: center;
   display: grid;
+  gap: 15px;
   grid-template-columns: 800px;
   height: 100%;
   max-width: 1024px;
