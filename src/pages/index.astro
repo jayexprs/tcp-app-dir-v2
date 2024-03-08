@@ -6,7 +6,7 @@ import data from "../data.json";
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Icon actions - Forge</title>
+    <title>App Directory</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
@@ -42,11 +42,7 @@ import data from "../data.json";
       </forge-app-bar>
       <div slot="body">
         <main>
-          {
-            Object.keys(data).map((product) => (
-              <ProductCard product={data[product]} />
-            ))
-          }
+          {data.map((product) => <ProductCard product={product} />)}
         </main>
 
         <script

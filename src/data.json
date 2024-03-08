@@ -1,5 +1,5 @@
-{
-  "Payments": {
+[
+  {
     "name": "Payments",
     "apps": [
       {
@@ -16,7 +16,7 @@
       }
     ]
   },
-  "Energov": {
+  {
       "name": "Energov",
       "apps": [
         {
@@ -33,7 +33,7 @@
         }
       ]
   },
-  "Employee Access": {
+  {
       "name": "Employee Access",
       "apps": [
         {
@@ -46,8 +46,8 @@
         }
       ]
   },
-  "Platform Admin": {
-    "name": "System Admin",
+  {
+    "name": "Platform Admin",
     "apps": [
       {
         "name": "Admin Center",
@@ -63,4 +63,4 @@
       }
     ]
   }
-}
+]

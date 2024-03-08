@@ -1,0 +1,14 @@
+---
+import data from "../data.json";
+export function getStaticPaths() {
+  return data.map((product) => {
+    return {
+      params: { product: product.name.toLowerCase().split(" ").join("-") },
+      props: { product },
+    };
+  });
+}
+const { product } = Astro.props;
+---
+
+<div>Welcome to the page for {product.name}!</div>
