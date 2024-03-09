@@ -43,7 +43,8 @@
         },
         {
           "name": "Employee Access Admin",
-          "description": "Administer Employee Access"
+          "description": "Administer Employee Access",
+          "isAdmin": true
         }
       ]
   },
