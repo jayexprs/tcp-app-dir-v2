@@ -1,5 +1,5 @@
 ---
-const { name, description } = Astro.props;
+const { name, description, isAdmin } = Astro.props;
 ---
 
 <forge-card
@@ -9,12 +9,12 @@ const { name, description } = Astro.props;
 >
   <div class="app__icon-row">
     <div class="forge-typography--body1" id="app-name-label">{name}</div>
-    <div style="display: flex; align-items: center">
+    <div style="display: flex; align-items: center;">
       <forge-badge
         theme="info-primary"
         id="admin-app-badge"
-        class="hide"
-        style="margin-right: 32px">Admin app</forge-badge
+        class={isAdmin ? "show" : "hide"}
+        style="">Admin app</forge-badge
       >
     </div>
   </div>

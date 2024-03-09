@@ -12,7 +12,8 @@
       },
       {
         "name": "Permissions",
-        "description": "Manage roles for Payments users"
+        "description": "Manage roles for Payments users",
+        "isAdmin": true
       }
     ]
   },

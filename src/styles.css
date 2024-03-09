@@ -86,11 +86,11 @@ main {
 
 .app__icon-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flext-start;
   align-items: center;
   padding-inline-start: 8px;
   padding-block: 4px;
-  gap: 8px;
+  gap: 16px;
 }
 
 .hide {
