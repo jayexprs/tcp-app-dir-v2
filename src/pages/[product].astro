@@ -61,8 +61,10 @@ const { product } = Astro.props;
             </div>
             <div style="align-self: center;">App Directory</div>
           </div>
-          <h1>{product.name}</h1>
-          <h3>This describes the {product.name} product, and its apps.</h3>
+          <h1 style="forge-typography-title">{product.name}</h1>
+          <p style="forge-typography--subtitle1">
+            This describes the {product.name} product and its apps.
+          </p>
           {
             product.apps.map((app) => (
               <AppCard
