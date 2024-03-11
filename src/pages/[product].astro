@@ -61,6 +61,7 @@ const { product } = Astro.props;
             </div>
             <div style="align-self: center;">App Directory</div>
           </div>
+
           <h1 style="forge-typography-title">{product.name}</h1>
           <p style="forge-typography--subtitle1">
             This describes the {product.name} product and its apps.
@@ -83,9 +84,10 @@ const { product } = Astro.props;
       </div>
     </forge-scaffold>
   </body>
+
+  <style>
+    a {
+      color: #333;
+    }
+  </style>
 </html>
-<style>
-  a {
-    color: #333;
-  }
-</style>
