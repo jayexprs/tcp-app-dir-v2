@@ -59,35 +59,40 @@ const { product } = Astro.props;
                 ></forge-icon>
               </a>
             </div>
-            <div style="align-self: center;">App Directory</div>
+            <div style="align-self: center; font-weight: bold;">
+              App Directory
+            </div>
           </div>
-
-          <h1 style="forge-typography-title">{product.name}</h1>
-          <p style="forge-typography--subtitle1">
-            This describes the {product.name} product and its apps.
-          </p>
-          {
-            product.apps.map((app) => (
-              <AppCard
-                name={app.name}
-                description={app.description}
-                isAdmin={app.isAdmin}
-              />
-            ))
-          }
+          <div
+            style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
+          >
+            <h1 style="forge-typography-title">{product.name}</h1>
+            <p style="forge-typography--subtitle1">
+              This describes the {product.name} product and its apps.
+            </p>
+            {
+              product.apps.map((app) => (
+                <AppCard
+                  name={app.name}
+                  description={app.description}
+                  isAdmin={app.isAdmin}
+                />
+              ))
+            }
+          </div>
         </main>
-
-        <script
-          type="module"
-          src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"
-        ></script>
       </div>
+
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"
+      ></script>
     </forge-scaffold>
   </body>
-
-  <style>
-    a {
-      color: #333;
-    }
-  </style>
 </html>
+
+<style>
+  a {
+    color: #333;
+  }
+</style>
