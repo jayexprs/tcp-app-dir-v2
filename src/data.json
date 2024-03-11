@@ -1,5 +1,50 @@
 [
   {
+    "name": "Platform Admin",
+    "apps": [
+      {
+        "name": "Admin Center",
+        "description": "Administer your Tyler solutions"
+      },
+      {
+        "name": "Community Access Profile Manager",
+        "description": "Administer community members' access"
+      },
+      {
+        "name": "Brand Manager",
+        "description": "Manage the styles used by your Tyler solutions"
+      }
+    ]
+  },
+  {
+    "name": "ACFR Statement Builder",
+    "apps": [
+      {
+        "name": "ACFR Statement Builder",
+        "description": "Build your financial reports"
+      }
+    ]
+  },
+  {
+    "name": "Hub",
+    "description": "Data-based dashboards for your Tyler solutions",
+    "apps": [
+      {
+        "name": "Hub Main",
+        "description": "Starting point for Hub"
+      },
+      {
+        "name": "Hub Admin",
+        "description": "Manage Hub roles and permissions",
+        "isAdmin": true
+      },
+      {
+        "name": "Hub Search",
+        "description": "Search across your Hub pages"
+      }
+    ]
+  },
+  {
     "name": "Payments",
     "apps": [
       {
@@ -47,22 +92,5 @@
           "isAdmin": true
         }
       ]
-  },
-  {
-    "name": "Platform Admin",
-    "apps": [
-      {
-        "name": "Admin Center",
-        "description": "Administer your Tyler solutions"
-      },
-      {
-        "name": "Community Access Profile Manager",
-        "description": "Administer community members' access"
-      },
-      {
-        "name": "Brand Manager",
-        "description": "Manage the styles used by your Tyler solutions"
-      }
-    ]
   }
 ]

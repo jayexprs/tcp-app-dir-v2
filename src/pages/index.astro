@@ -1,56 +1,17 @@
 ---
 import ProductCard from "../../src/components/ProductCard.astro";
 import data from "../data.json";
-import "../styles.css";
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>App Directory</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/css/tyler-font.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/forge-core.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/theme/forge-theme.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/typography/forge-typography.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/css/tyler-icons-standard.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/forge.css"
-    />
-  </head>
-
-  <body class="forge-typography">
-    <forge-scaffold class="scaffold-example">
-      <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
-      </forge-app-bar>
-      <div slot="body">
-        <main>
-          {data.map((product) => <ProductCard product={product} />)}
-        </main>
-
-        <script
-          type="module"
-          src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"
-        ></script>
-      </div>
-    </forge-scaffold>
-  </body>
-</html>
+<SiteLayout>
+  <forge-scaffold class="scaffold-example">
+    <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
+    </forge-app-bar>
+    <div slot="body">
+      <main>
+        {data.map((product) => <ProductCard product={product} />)}
+      </main>
+    </div>
+  </forge-scaffold>
+</SiteLayout>

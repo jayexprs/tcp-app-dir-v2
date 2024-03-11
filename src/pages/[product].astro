@@ -1,7 +1,7 @@
 ---
 import data from "../data.json";
 import AppCard from "../components/AppCard.astro";
-import "../styles.css";
+import SiteLayout from "../layouts/SiteLayout.astro";
 export function getStaticPaths() {
   return data.map((product) => {
     return {
@@ -13,84 +13,44 @@ export function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>App Directory</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/css/tyler-font.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/forge-core.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/theme/forge-theme.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/typography/forge-typography.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.forge.tylertech.com/v1/css/tyler-icons-standard.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/forge.css"
-    />
-  </head>
-
-  <body class="forge-typography">
-    <forge-scaffold class="scaffold-example">
-      <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
-      </forge-app-bar>
-      <div slot="body">
-        <main>
-          <div style="display: flex; gap: 5px;">
-            <div>
-              <a href="/">
-                <forge-icon name="arrow_back" external id="app-icon-preview"
-                ></forge-icon>
-              </a>
-            </div>
-            <div style="align-self: center; font-weight: bold;">
-              App Directory
-            </div>
+<SiteLayout>
+  <forge-scaffold class="scaffold-example">
+    <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
+    </forge-app-bar>
+    <div slot="body">
+      <main>
+        <div style="display: flex; gap: 5px;">
+          <div>
+            <a href="/">
+              <forge-icon name="arrow_back" external id="app-icon-preview"
+              ></forge-icon>
+            </a>
           </div>
-          <div
-            style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
-          >
-            <h1 style="forge-typography-title">{product.name}</h1>
-            <p style="forge-typography--subtitle1">
-              This describes the {product.name} product and its apps.
-            </p>
-            {
-              product.apps.map((app) => (
-                <AppCard
-                  name={app.name}
-                  description={app.description}
-                  isAdmin={app.isAdmin}
-                />
-              ))
-            }
+          <div style="align-self: center; font-weight: bold;">
+            App Directory
           </div>
-        </main>
-      </div>
-
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"
-      ></script>
-    </forge-scaffold>
-  </body>
-</html>
-
+        </div>
+        <div
+          style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
+        >
+          <h1 style="forge-typography-title">{product.name}</h1>
+          <p style="forge-typography--subtitle1">
+            This describes the {product.name} product and its apps.
+          </p>
+          {
+            product.apps.map((app) => (
+              <AppCard
+                name={app.name}
+                description={app.description}
+                isAdmin={app.isAdmin}
+              />
+            ))
+          }
+        </div>
+      </main>
+    </div>
+  </forge-scaffold>
+</SiteLayout>
 <style>
   a {
     color: #333;

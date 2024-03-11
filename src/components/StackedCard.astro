@@ -1,0 +1,28 @@
+---
+const { product } = Astro.props;
+const productPath = product.name.toLowerCase().split(" ").join("-");
+const { apps } = product;
+---
+
+<forge-card class="preview__card">
+  <forge-toolbar>
+    <div slot="start" class="product-name-container">
+      <forge-icon name="app_registration" external id="app-icon-preview"
+      ></forge-icon>
+      <h2 slot="start" class="forge-typography--title">
+        {product.name}
+      </h2>
+    </div>
+    <div slot="end">
+      <a href={productPath}>
+        <forge-icon name="arrow_forward" external id="app-icon-preview"
+        ></forge-icon>
+      </a>
+    </div>
+  </forge-toolbar>
+</forge-card>
+<style>
+  a {
+    color: #333;
+  }
+</style>
