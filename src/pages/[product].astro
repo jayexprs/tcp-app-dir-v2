@@ -52,10 +52,24 @@ const { product } = Astro.props;
       </forge-app-bar>
       <div slot="body">
         <main>
-          <h1>Welcome to the page for {product.name}!</h1>
+          <div style="display: flex; gap: 5px;">
+            <div>
+              <a href="/">
+                <forge-icon name="arrow_back" external id="app-icon-preview"
+                ></forge-icon>
+              </a>
+            </div>
+            <div style="align-self: center;">App Directory</div>
+          </div>
+          <h1>{product.name}</h1>
+          <h3>This describes the {product.name} product, and its apps.</h3>
           {
             product.apps.map((app) => (
-              <AppCard name={app.name} description={app.description} />
+              <AppCard
+                name={app.name}
+                description={app.description}
+                isAdmin={app.isAdmin}
+              />
             ))
           }
         </main>
@@ -68,3 +82,8 @@ const { product } = Astro.props;
     </forge-scaffold>
   </body>
 </html>
+<style>
+  a {
+    color: #333;
+  }
+</style>
