@@ -1,6 +1,7 @@
 [
   {
     "name": "Platform Admin",
+    "icon": "ac_unit",
     "apps": [
       {
         "name": "Admin Center",
@@ -27,6 +28,7 @@
   },
   {
     "name": "Hub",
+    "icon": "add_chart",
     "description": "Data-based dashboards for your Tyler solutions",
     "apps": [
       {
@@ -46,6 +48,7 @@
   },
   {
     "name": "Payments",
+    "icon": "payments",
     "apps": [
       {
         "name": "Payments Administration",
@@ -64,6 +67,7 @@
   },
   {
       "name": "Energov",
+      "icon": "architecture",
       "apps": [
         {
           "name": "License set up",
@@ -81,6 +85,7 @@
   },
   {
       "name": "Employee Access",
+      "icon": "badge",
       "apps": [
         {
           "name": "Employee Access",
@@ -92,5 +97,43 @@
           "isAdmin": true
         }
       ]
+  },
+  {
+    "name": "ERP Financials",
+    "icon": "finance",
+    "description": "Your enterprise financial accounting system",
+    "apps": [
+      {
+        "name": "General Ledger",
+        "description": "Account for every financial transaction"
+      },
+      {
+        "name": "Purchasing",
+        "description": "Request-based purchasing tracking"
+      },
+      {
+        "name": "Project Accounting",
+        "description": "Track the costs and outputs of your projects"
+      },
+      {
+        "name": "Work Orders",
+        "description": "Manage requests to fix, update, or improve existing capital assets"
+      }
+    ]
+  },
+  {
+    "name": "ERP Human Resources",
+    "icon": "person_search",
+    "description": "Your human resources management system",
+    "apps": [
+      {
+        "name": "HR/Payroll",
+        "description": "Employee and contractor HR administration and payroll"
+      },
+      {
+        "name": "Applicant Tracking",
+        "description": "Track applicants to open positions"
+      }
+    ]
   }
 ]
