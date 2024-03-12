@@ -95,7 +95,7 @@
    * Change this to a string for fine-grained control of the 'font-feature-settings' CSS property.
    * Defaults to false.
    */
-"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
   /**
    * Controls the font size in pixels.
    */
@@ -132,7 +132,7 @@
   /**
    * Configure the editor's hover.
    */
-   "editor.hover": { "enabled": false, "delay": 300, "sticky": true },
+  "editor.hover": { "enabled": false, "delay": 300, "sticky": true },
   /**
    * Insert spaces when pressing Tab. This setting is overridden based on the
    * file contents when 'editor.detectIndentation' is on.
@@ -146,7 +146,10 @@
   /**
    * Enables the code action lightbulb in the editor.
    */
- "editor.lightbulb": { "enabled": false },
+  "editor.lightbulb": {
+    "enabled": false
+  },
+  "editor.lightbulb.enabled": "off"
   /**
    * The width reserved for line decorations (in px).
    * Line decorations are placed between line numbers and the editor content.
