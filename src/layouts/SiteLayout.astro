@@ -1,6 +1,5 @@
 ---
 import "../styles.css";
-import LayoutSwitcher from "../components/LayoutSwitcher.astro";
 ---
 
 <!doctype html>
@@ -40,6 +39,14 @@ import LayoutSwitcher from "../components/LayoutSwitcher.astro";
   <body class="forge-typography">
     <forge-scaffold class="scaffold-example">
       <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
+        <forge-menu
+          slot="end"
+          style="padding-right: 20px"
+          placement="right-end"
+        >
+          <forge-icon name="action_launcher" external external-type="custom"
+          ></forge-icon>
+        </forge-menu>
       </forge-app-bar>
       <div slot="body">
         <slot />
@@ -51,3 +58,18 @@ import LayoutSwitcher from "../components/LayoutSwitcher.astro";
     ></script>
   </body>
 </html>
+<script>
+  const menu = document.querySelector("forge-menu");
+  menu.options = [
+    {
+      value: "edit",
+      options: [
+        { value: "option 1", label: "Option 1" },
+        { value: "option b", label: "Option B" },
+      ],
+      label: "Edit",
+    },
+    { value: "delete", label: "Delete" },
+    { value: "view", label: "View" },
+  ];
+</script>
