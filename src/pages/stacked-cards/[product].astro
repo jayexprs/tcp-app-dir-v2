@@ -1,0 +1,45 @@
+---
+import data from "../../data.json";
+import AppCard from "../../components/AppCard.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+export function getStaticPaths() {
+  return data.map((product) => {
+    return {
+      params: { product: product.name.toLowerCase().split(" ").join("-") },
+      props: { product },
+    };
+  });
+}
+const { product } = Astro.props;
+---
+
+<SiteLayout>
+  <main>
+    <div style="display: flex; gap: 5px;">
+      <div>
+        <a href="/stacked-cards">
+          <forge-icon name="arrow_back" external id="app-icon-preview"
+          ></forge-icon>
+        </a>
+      </div>
+      <div style="align-self: center; font-weight: bold;">App Directory</div>
+    </div>
+    <div
+      style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
+    >
+      <h1 style="forge-typography-title">{product.name}</h1>
+      <p style="forge-typography--subtitle1">
+        This describes the {product.name} product and its apps.
+      </p>
+      {
+        product.apps.map((app) => (
+          <AppCard
+            name={app.name}
+            description={app.description}
+            isAdmin={app.isAdmin}
+          />
+        ))
+      }
+    </div>
+  </main>
+</SiteLayout>

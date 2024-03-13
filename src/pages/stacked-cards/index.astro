@@ -1,0 +1,11 @@
+---
+import StackedCard from "../../components/StackedCard.astro";
+import data from "../../data.json";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout>
+  <div class="stacked-main">
+    {data.map((product) => <StackedCard product={product} />)}
+  </div>
+</SiteLayout>
