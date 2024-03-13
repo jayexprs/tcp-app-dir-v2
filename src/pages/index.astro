@@ -5,13 +5,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
-  <forge-scaffold class="scaffold-example">
-    <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
-    </forge-app-bar>
-    <div slot="body">
-      <main>
-        {data.map((product) => <ProductCard product={product} />)}
-      </main>
-    </div>
-  </forge-scaffold>
+  <main>
+    {data.map((product) => <ProductCard product={product} />)}
+  </main>
 </SiteLayout>

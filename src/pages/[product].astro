@@ -14,41 +14,32 @@ const { product } = Astro.props;
 ---
 
 <SiteLayout>
-  <forge-scaffold class="scaffold-example">
-    <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
-    </forge-app-bar>
-    <div slot="body">
-      <main>
-        <div style="display: flex; gap: 5px;">
-          <div>
-            <a href="/">
-              <forge-icon name="arrow_back" external id="app-icon-preview"
-              ></forge-icon>
-            </a>
-          </div>
-          <div style="align-self: center; font-weight: bold;">
-            App Directory
-          </div>
-        </div>
-        <div
-          style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
-        >
-          <h1 style="forge-typography-title">{product.name}</h1>
-          <p style="forge-typography--subtitle1">
-            This describes the {product.name} product and its apps.
-          </p>
-          {
-            product.apps.map((app) => (
-              <AppCard
-                name={app.name}
-                description={app.description}
-                isAdmin={app.isAdmin}
-              />
-            ))
-          }
-        </div>
-      </main>
+  <main>
+    <div style="display: flex; gap: 5px;">
+      <div>
+        <a href="/">
+          <forge-icon name="arrow_back" external id="app-icon-preview"
+          ></forge-icon>
+        </a>
+      </div>
+      <div style="align-self: center; font-weight: bold;">App Directory</div>
     </div>
-  </forge-scaffold>
+    <div
+      style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
+    >
+      <h1 style="forge-typography-title">{product.name}</h1>
+      <p style="forge-typography--subtitle1">
+        This describes the {product.name} product and its apps.
+      </p>
+      {
+        product.apps.map((app) => (
+          <AppCard
+            name={app.name}
+            description={app.description}
+            isAdmin={app.isAdmin}
+          />
+        ))
+      }
+    </div>
+  </main>
 </SiteLayout>
-<style></style>

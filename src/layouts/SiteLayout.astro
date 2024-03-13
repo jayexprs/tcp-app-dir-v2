@@ -37,7 +37,13 @@ import "../styles.css";
     />
   </head>
   <body class="forge-typography">
-    <slot />
+    <forge-scaffold class="scaffold-example">
+      <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
+      </forge-app-bar>
+      <div slot="body">
+        <slot />
+      </div>
+    </forge-scaffold>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"

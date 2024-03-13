@@ -54,6 +54,17 @@ main {
   margin: 0 auto;
 }
 
+.stacked-main {
+  padding: 36px;
+  justify-content: center;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 600px;
+  max-width: 660px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .product-name-container {
   display: flex;
   align-items: center;
@@ -71,6 +82,12 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+}
+
+.stacked-card {
+  width: 100%;
+  --forge-card-padding: 0;
+   
 }
 
 .app__body {
@@ -103,4 +120,8 @@ main {
 p {
   margin: 0;
   padding: 0;
+}
+
+forge-toolbar::part(root) {
+  border: none;
 }
