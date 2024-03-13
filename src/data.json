@@ -100,7 +100,7 @@
   },
   {
     "name": "ERP Financials",
-    "icon": "finance",
+    "icon": "send_and_archive",
     "description": "Your enterprise financial accounting system",
     "apps": [
       {
