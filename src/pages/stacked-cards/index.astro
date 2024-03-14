@@ -1,5 +1,4 @@
 ---
-import LayoutSwitcher from "../../components/LayoutSwitcher.astro";
 import StackedCard from "../../components/StackedCard.astro";
 import data from "../../data.json";
 import SiteLayout from "../../layouts/SiteLayout.astro";
@@ -7,7 +6,6 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
 
 <SiteLayout>
   <div class="stacked-main">
-    <LayoutSwitcher />
     {data.map((product) => <StackedCard product={product} />)}
   </div>
 </SiteLayout>

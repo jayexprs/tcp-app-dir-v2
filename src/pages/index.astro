@@ -1,13 +1,11 @@
 ---
 import ProductCard from "../../src/components/ProductCard.astro";
-import LayoutSwitcher from "../components/LayoutSwitcher.astro";
 import data from "../data.json";
 import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
   <main>
-    <LayoutSwitcher />
     {data.map((product) => <ProductCard product={product} />)}
   </main>
 </SiteLayout>
