@@ -1,7 +1,7 @@
 ---
 import data from "../../data.json";
 import AppCard from "../../components/AppCard.astro";
-import SiteLayout from "../../layouts/SiteLayout.astro";
+import StackedLayout from "../../layouts/StackedLayout.astro";
 export function getStaticPaths() {
   return data.map((product) => {
     return {
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<SiteLayout>
+<StackedLayout>
   <main>
     <div style="display: flex; gap: 5px;">
       <div>
@@ -42,4 +42,4 @@ const { product } = Astro.props;
       }
     </div>
   </main>
-</SiteLayout>
+</StackedLayout>

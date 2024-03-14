@@ -1,0 +1,79 @@
+---
+import "../styles.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>App Directory</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.forge.tylertech.com/v1/css/tyler-font.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/forge-core.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/theme/forge-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@2.11.0/typography/forge-typography.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.forge.tylertech.com/v1/css/tyler-icons-standard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/forge.css"
+    />
+  </head>
+  <body class="forge-typography">
+    <forge-scaffold class="scaffold-example">
+      <forge-app-bar title-text="App Directory | Tylertown, ME" slot="header">
+        <forge-menu
+          slot="end"
+          style="padding-right: 20px"
+          placement="right-end"
+        >
+          <forge-icon name="action_launcher" external external-type="custom"
+          ></forge-icon>
+        </forge-menu>
+      </forge-app-bar>
+      <div slot="body">
+        <div
+          style="display: grid; grid-template-columns: 1fr 10fr; padding: 20px;"
+        >
+          <slot />
+        </div>
+      </div>
+    </forge-scaffold>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@tylertech/forge@2.11.0/dist/esm/index.js"
+    ></script>
+  </body>
+</html>
+<script>
+  const menu = document.querySelector("forge-menu");
+  menu.options = [
+    {
+      value: "edit",
+      options: [
+        { value: "option 1", label: "Option 1" },
+        { value: "option b", label: "Option B" },
+      ],
+      label: "Edit",
+    },
+    { value: "delete", label: "Delete" },
+    { value: "view", label: "View" },
+  ];
+</script>
