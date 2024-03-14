@@ -1,5 +1,6 @@
 ---
 import "../styles.css";
+import Filter from "../components/Filter.astro";
 ---
 
 <!doctype html>
@@ -48,8 +49,14 @@ import "../styles.css";
           ></forge-icon>
         </forge-menu>
       </forge-app-bar>
+
       <div slot="body">
-        <slot />
+        <div
+          style="display: grid; grid-template-columns: 1fr 10fr; padding: 20px;"
+        >
+          <Filter />
+          <slot />
+        </div>
       </div>
     </forge-scaffold>
     <script

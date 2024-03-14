@@ -44,25 +44,24 @@ a {
 }
 
 main {
-  padding: 48px;
   justify-content: center;
   display: grid;
   gap: 15px;
   grid-template-columns: 800px;
   max-width: 1024px;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .stacked-main {
-  padding: 36px;
+ 
   justify-content: center;
   display: grid;
   gap: 15px;
   grid-template-columns: 600px;
   max-width: 660px;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .product-name-container {
