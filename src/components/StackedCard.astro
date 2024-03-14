@@ -1,7 +1,7 @@
 ---
 const { product } = Astro.props;
 const productPath =
-  Astro.url + "/" + product.name.toLowerCase().split(" ").join("-");
+  "/stacked-cards/" + product.name.toLowerCase().split(" ").join("-");
 ---
 
 <forge-card class="stacked__card">
