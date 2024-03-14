@@ -23,6 +23,11 @@
       {
         "name": "ACFR Statement Builder",
         "description": "Build your financial reports"
+      },
+      {
+        "name": "ACFR Admin",
+        "description": "Manage ACFR roles and permissions",
+        "isAdmin": true
       }
     ]
   },
