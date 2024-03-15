@@ -18,16 +18,24 @@ const productPath =
         </div>
 
         <div>
-          <a href={productPath}>
-            <forge-icon name="arrow_forward" external id="app-icon-preview" />
-          </a>
+          <forge-icon-button dense>
+            <button type="button">
+              <forge-icon
+                name="add_circle_outline"
+                external
+                id="app-icon-preview"
+              />
+            </button>
+          </forge-icon-button>
         </div>
       </div>
       <div>
         <p>{app.description}</p>
       </div>
       <div>
-        <span class="product-chip">{product.name}</span>
+        <span class="product-chip forge-typography--subtitle1-secondary">
+          {product.name}
+        </span>
       </div>
     </div>
   ))
@@ -40,12 +48,11 @@ const productPath =
     border-radius: 6px;
     display: grid;
     gap: 12px;
+    grid-template-rows: 1fr 1.5fr 1fr;
   }
   .product-chip {
     border-radius: 12px;
     background-color: rgba(143, 143, 143, 0.435);
     padding: 6px;
-    font-size: 0.9rem;
-    font-weight: bold;
   }
 </style>
