@@ -4,22 +4,48 @@ const productPath =
   "/stacked-cards/" + product.name.toLowerCase().split(" ").join("-");
 ---
 
-<forge-card class="stacked__card">
-  <forge-toolbar>
-    <div slot="start" class="product-name-container">
-      <forge-icon
-        name={product.icon ? product.icon : "app_registration"}
-        external
-        id="app-icon-preview"></forge-icon>
-      <h2 slot="start" class="forge-typography--title">
-        {product.name}
-      </h2>
+{
+  product.apps.map((app) => (
+    <div class="product-app">
+      <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; gap: 9px">
+          <forge-icon
+            name={product.icon ? product.icon : "app_registration"}
+            external
+            id="app-icon-preview"
+          />
+          <h3>{app.name}</h3>
+        </div>
+
+        <div>
+          <a href={productPath}>
+            <forge-icon name="arrow_forward" external id="app-icon-preview" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <p>{app.description}</p>
+      </div>
+      <div>
+        <span class="product-chip">{product.name}</span>
+      </div>
     </div>
-    <div slot="end">
-      <a href={productPath}>
-        <forge-icon name="arrow_forward" external id="app-icon-preview"
-        ></forge-icon>
-      </a>
-    </div>
-  </forge-toolbar>
-</forge-card>
+  ))
+}
+<style>
+  .product-app {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #dadada;
+    border-radius: 6px;
+    display: grid;
+    gap: 12px;
+  }
+  .product-chip {
+    border-radius: 12px;
+    background-color: rgba(143, 143, 143, 0.435);
+    padding: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+</style>

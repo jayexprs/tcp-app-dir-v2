@@ -132,7 +132,7 @@
   /**
    * Configure the editor's hover.
    */
-  "editor.hover": { "enabled": false, "delay": 300, "sticky": true },
+  //"editor.hover": { "enabled": false, "delay": 300, "sticky": true },
   /**
    * Insert spaces when pressing Tab. This setting is overridden based on the
    * file contents when 'editor.detectIndentation' is on.

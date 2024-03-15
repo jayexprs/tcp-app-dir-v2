@@ -44,13 +44,11 @@ a {
 }
 
 main {
-  justify-content: center;
+  
   display: grid;
-  gap: 15px;
+  gap: 25px;
   grid-template-columns: 800px;
-  max-width: 1024px;
   width: 100%;
-  margin: 10px;
 }
 
 .stacked-main {
@@ -58,10 +56,9 @@ main {
   justify-content: center;
   display: grid;
   gap: 15px;
-  grid-template-columns: 600px;
-  max-width: 660px;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
   width: 100%;
-  margin: 10px;
 }
 
 .product-name-container {
@@ -73,7 +70,7 @@ main {
 .preview__card {
   width: 100%;
   --forge-card-padding: 0;
-  height: min-content;
+  
 }
 
 .preview__body {
@@ -84,7 +81,7 @@ main {
 }
 
 .stacked-card {
-  width: 100%;
+  
   --forge-card-padding: 0;
    
 }
