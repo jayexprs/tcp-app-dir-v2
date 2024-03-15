@@ -47,7 +47,7 @@ main {
   
   display: grid;
   gap: 25px;
-  grid-template-columns: 800px;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
 
