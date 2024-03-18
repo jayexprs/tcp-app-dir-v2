@@ -14,7 +14,7 @@ const productPath =
             external
             id="app-icon-preview"
           />
-          <h3>{app.name}</h3>
+          <h3 style="max-width: 25ch; font-weight:400">{app.name}</h3>
         </div>
 
         <div>
@@ -29,13 +29,25 @@ const productPath =
           </forge-icon-button>
         </div>
       </div>
-      <div>
+      <div style="display: grid; align-content: center">
         <p>{app.description}</p>
       </div>
-      <div>
-        <span class="product-chip forge-typography--subtitle1-secondary">
+      <div style="display: flex; gap: 12px">
+        <forge-chip style="" dense hasLeading>
+          <forge-icon
+            slot="leading"
+            name={product.icon ? product.icon : "app_registration"}
+            external
+          />
           {product.name}
-        </span>
+        </forge-chip>
+        <forge-chip
+          class={app.isAdmin ? "show" : "hide"}
+          style="border-color: black; color: black"
+          dense
+        >
+          Admin app
+        </forge-chip>
       </div>
     </div>
   ))
@@ -48,7 +60,7 @@ const productPath =
     border-radius: 6px;
     display: grid;
     gap: 12px;
-    grid-template-rows: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .product-chip {
     border-radius: 12px;

@@ -4,17 +4,34 @@ import data from "../data.json";
 ---
 
 <div class="filter">
-  <p>Search for products and apps</p>
-  <input type="text" name="search" id="" />
-  <p><input type="checkbox" /> Admin</p>
-  <p><input type="checkbox" /> Favorites</p>
+  <label for="product-apps">Search</label>
+  <input
+    type="text"
+    id="product-apps"
+    name="product-apps"
+    required
+    minlength="4"
+    maxlength="8"
+    size="10"
+  />
   <div>
-    <h3>Products</h3>
+    <input type="checkbox" id="favorites" name="favorites" />
+    <label for="favorites">Favorites</label>
+  </div>
+  <div>
+    <input type="checkbox" id="admin" name="admin" />
+    <label for="favorites">Admin</label>
+  </div>
+  <div>
+    <p style="margin-bottom: 6px; font-weight: 500; font-size: 1.1rem">
+      Filter by product
+    </p>
     {
       data.map((product) => (
-        <p>
-          <input type="checkbox" /> {product.name}{" "}
-        </p>
+        <div>
+          <input type="checkbox" id={product.name} name={product.name} />
+          <label for={product.name}>{product.name}</label>
+        </div>
       ))
     }
   </div>
@@ -28,7 +45,7 @@ import data from "../data.json";
     border-radius: 4px;
     display: grid;
     align-content: start;
-    gap: 12px;
+    gap: 8px;
     padding: 20px;
   }
 </style>
