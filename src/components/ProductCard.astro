@@ -19,13 +19,34 @@ const { apps } = product;
   </forge-toolbar>
   <div class="preview__body" id="app-card-grid">
     {
-      apps.map((app) => (
-        <AppCard
-          name={app.name}
-          description={app.description}
-          isAdmin={app.isAdmin}
-        />
-      ))
+      apps
+        .slice(0, 3)
+        .map((app) => (
+          <AppCard
+            name={app.name}
+            description={app.description}
+            isAdmin={app.isAdmin}
+          />
+        ))
+    }
+    {
+      apps.length > 3 && (
+        <div>
+          <a href={productPath}>see more</a> ( {apps.length} )
+        </div>
+      )
     }
   </div>
 </forge-card>
+<style>
+  .preview__card {
+    width: 100%;
+    --forge-card-padding: 0;
+  }
+  .preview__body {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+</style>

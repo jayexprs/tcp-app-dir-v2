@@ -1,12 +1,10 @@
 ---
-import ProductCard from "../../src/components/ProductCard.astro";
-import data from "../data.json";
-import SiteLayout from "../layouts/SiteLayout.astro";
-import SearchBar from "../components/SearchBar.astro";
+import ProductCard from "../../../src/components/ProductCard.astro";
+import data from "../../data.json";
+import SiteLayout from "../../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
-  <SearchBar slot="search-bar" />
   <main>
     {data.map((product) => <ProductCard product={product} />)}
   </main>

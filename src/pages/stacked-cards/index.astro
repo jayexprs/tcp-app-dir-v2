@@ -9,3 +9,13 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
     {data.map((product) => <StackedCard product={product} />)}
   </div>
 </SiteLayout>
+<style>
+  .stacked-main {
+    justify-content: center;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1250px;
+    width: 100%;
+  }
+</style>

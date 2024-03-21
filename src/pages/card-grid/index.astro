@@ -1,0 +1,19 @@
+---
+import ProductCard from "../../../src/components/ProductCard.astro";
+import data from "../../data.json";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout>
+  <main>
+    {data.map((product) => <ProductCard product={product} />)}
+  </main>
+</SiteLayout>
+<style>
+  main {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+</style>

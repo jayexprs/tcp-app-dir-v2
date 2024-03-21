@@ -38,3 +38,31 @@ const { name, description, isAdmin } = Astro.props;
   </forge-menu>
   <forge-ripple></forge-ripple>
 </forge-card>
+<style>
+  .app__body {
+    padding-inline: 8px;
+    display: grid;
+    gap: 4px;
+    margin-block-end: 8px;
+  }
+
+  .app__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .app__icon-row {
+    display: flex;
+    justify-content: flext-start;
+    align-items: center;
+    padding-inline-start: 8px;
+    padding-block: 4px;
+    gap: 16px;
+  }
+
+  .hide {
+    display: none;
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import "../styles.css";
 import Filter from "../components/Filter.astro";
+import SearchBar from "../components/SearchBar.astro";
 ---
 
 <!doctype html>
@@ -12,6 +13,7 @@ import Filter from "../components/Filter.astro";
     <meta name="viewport" content="width=device-width" />
     <title>App Directory</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link
       rel="stylesheet"
       href="https://cdn.forge.tylertech.com/v1/css/tyler-font.css"
@@ -50,6 +52,7 @@ import Filter from "../components/Filter.astro";
         </forge-menu>
       </forge-app-bar>
       <div slot="body">
+        <slot name="search-bar" />
         <div
           style="display: grid; grid-template-columns: 1fr 5fr; padding: 20px; gap: 20px;"
         >
@@ -64,18 +67,3 @@ import Filter from "../components/Filter.astro";
     ></script>
   </body>
 </html>
-<script>
-  const menu = document.querySelector("forge-menu");
-  menu.options = [
-    {
-      value: "edit",
-      options: [
-        { value: "option 1", label: "Option 1" },
-        { value: "option b", label: "Option B" },
-      ],
-      label: "Edit",
-    },
-    { value: "delete", label: "Delete" },
-    { value: "view", label: "View" },
-  ];
-</script>

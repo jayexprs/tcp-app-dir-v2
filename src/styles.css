@@ -43,23 +43,9 @@ a {
   color: #333;
 }
 
-main {
-  
-  display: grid;
-  gap: 35px;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-}
 
-.stacked-main {
- 
-  justify-content: center;
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1250px;
-  width: 100%;
-}
+
+
 
 .product-name-container {
   display: flex;
@@ -67,18 +53,9 @@ main {
   gap: 16px;
 }
 
-.preview__card {
-  width: 100%;
-  --forge-card-padding: 0;
-  
-}
 
-.preview__body {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
+
+
 
 .stacked-card {
   
@@ -86,32 +63,7 @@ main {
    
 }
 
-.app__body {
-  padding-inline: 8px;
-  display: grid;
-  gap: 4px;
-  margin-block-end: 8px;
-}
 
-.app__features {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.app__icon-row {
-  display: flex;
-  justify-content: flext-start;
-  align-items: center;
-  padding-inline-start: 8px;
-  padding-block: 4px;
-  gap: 16px;
-}
-
-.hide {
-  display: none;
-}
 
 p {
   margin: 0;
