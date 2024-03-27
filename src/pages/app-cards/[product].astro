@@ -1,7 +1,7 @@
 ---
-import data from "../data.json";
-import AppCard from "../components/AppCard.astro";
-import SiteLayout from "../layouts/SiteLayout.astro";
+import data from "../../data.json";
+import AppInCard from "../../components/AppInCard.astro";
+import AppCardLayout from "../../layouts/AppCardLayout.astro";
 export function getStaticPaths() {
   return data.map((product) => {
     return {
@@ -13,11 +13,11 @@ export function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<SiteLayout>
+<AppCardLayout>
   <main>
     <div style="display: flex; gap: 5px;">
       <div>
-        <a href="/">
+        <a href="/app-cards">
           <forge-icon name="arrow_back" external id="app-icon-preview"
           ></forge-icon>
         </a>
@@ -33,7 +33,7 @@ const { product } = Astro.props;
       </p>
       {
         product.apps.map((app) => (
-          <AppCard
+          <AppInCard
             name={app.name}
             description={app.description}
             isAdmin={app.isAdmin}
@@ -42,4 +42,4 @@ const { product } = Astro.props;
       }
     </div>
   </main>
-</SiteLayout>
+</AppCardLayout>

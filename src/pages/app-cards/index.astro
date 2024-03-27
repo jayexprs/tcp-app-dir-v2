@@ -1,18 +1,18 @@
 ---
 import SearchBar from "../../components/SearchBar.astro";
-import StackedCard from "../../components/StackedCard.astro";
+import AppCard from "../../components/AppCard.astro";
 import data from "../../data.json";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
   <SearchBar slot="search-bar" />
-  <div class="stacked-main">
-    {data.map((product) => <StackedCard product={product} />)}
+  <div class="app-cards-main">
+    {data.map((product) => <AppCard product={product} />)}
   </div>
 </SiteLayout>
 <style>
-  .stacked-main {
+  .app-cards-main {
     justify-content: center;
     display: grid;
     gap: 15px;

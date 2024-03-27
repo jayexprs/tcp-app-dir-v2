@@ -20,7 +20,9 @@ import data from "../data.json";
       data.map((product) => (
         <div>
           <input type="checkbox" id={product.name} name={product.name} />
-          <label for={product.name}>{product.name}</label>
+          <label for={product.name}>
+            {product.name} ({product.apps.length})
+          </label>
         </div>
       ))
     }

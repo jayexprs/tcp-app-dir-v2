@@ -1,0 +1,68 @@
+---
+const { name, description, isAdmin } = Astro.props;
+---
+
+<forge-card
+  outlined
+  style="cursor: pointer; position: relative; width: 100%;"
+  id="app-card"
+>
+  <div class="app__icon-row">
+    <div class="forge-typography--body1" id="app-name-label">{name}</div>
+    <div style="display: flex; align-items: center;">
+      <forge-badge
+        theme="info-primary"
+        id="admin-app-badge"
+        class={isAdmin ? "show" : "hide"}
+        style="">Admin app</forge-badge
+      >
+    </div>
+  </div>
+  <div class="app__body">
+    <p class="forge-typography--body2" id="app-description-label">
+      {description}
+    </p>
+    <div class="app__features" id="preview-features"></div>
+  </div>
+  <forge-menu id="app-menu" style="position: absolute; right: -4px; top: -4px">
+    <forge-icon-button dense style="margin: 12px 12px">
+      <button type="button" aria-label="Add to favorite">
+        <forge-icon name="add_circle_outline" external></forge-icon>
+      </button>
+    </forge-icon-button>
+    <forge-icon-button dense style="margin: 12px 12px">
+      <button type="button" aria-label="Launch app">
+        <forge-icon name="launch" external></forge-icon>
+      </button>
+    </forge-icon-button>
+  </forge-menu>
+  <forge-ripple></forge-ripple>
+</forge-card>
+<style>
+  .app__body {
+    padding-inline: 8px;
+    display: grid;
+    gap: 4px;
+    margin-block-end: 8px;
+  }
+
+  .app__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .app__icon-row {
+    display: flex;
+    justify-content: flext-start;
+    align-items: center;
+    padding-inline-start: 8px;
+    padding-block: 4px;
+    gap: 16px;
+  }
+
+  .hide {
+    display: none;
+  }
+</style>
