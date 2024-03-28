@@ -4,15 +4,16 @@
   "description": "[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/jayexprs/tcp-app-dir-v2)",
   "main": "script.js",
   "scripts": {
-      "dev": "astro dev",
-      "start": "astro dev",
-      "build": "astro build",
-      "preview": "astro preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "^4.4.15"
+    "@astrojs/db": "^0.9.7",
+    "astro": "^4.5.10"
   }
 }
