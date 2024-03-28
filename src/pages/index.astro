@@ -1,7 +1,7 @@
 ---
-import ProductCard from "../../src/components/ProductCard.astro";
-import data from "../data.json";
+import { db, Products } from "astro:db";
 import SiteLayout from "../layouts/SiteLayout.astro";
+const products = await db.select.from(Products);
 ---
 
 <SiteLayout>
@@ -9,15 +9,10 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     <h1>App Cards v. Product Cards</h1>
 
     {
-      data.map((product) => (
+      products.map((product) => (
         <ul class="product-ul">
           <li>
             <span class="product-name">{product.name}</span>
-            <ul>
-              {product.apps.map((app) => (
-                <li>{app.name}</li>
-              ))}
-            </ul>
           </li>
         </ul>
       ))
