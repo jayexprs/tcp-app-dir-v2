@@ -3,8 +3,11 @@ import data from "../data.json";
 ---
 
 <div class="filter">
-  <div style="display: flex; justify-items: center;">
-    <forge-icon name="filter_alt" external id="filter-button"></forge-icon>
+  <div style="display: flex; gap: 6px; align-items: center;">
+    <button type="button" id="filter-button" class="button">
+      <forge-icon name="filter_alt" external></forge-icon>
+    </button>
+    <p class="filter-content forge-typography--subtitle1-secondary">Filter</p>
   </div>
 
   <div class="filter-content">
@@ -16,9 +19,7 @@ import data from "../data.json";
     <label for="favorites">Admin</label>
   </div>
   <div class="filter-content">
-    <p style="margin-bottom: 6px; font-weight: 500; font-size: 1.1rem">
-      Filter by product
-    </p>
+    <h2 style="margin-bottom: 6px; font-size: 1.1rem">Filter by product</h2>
     {
       data.map((product) => (
         <div>
@@ -32,8 +33,14 @@ import data from "../data.json";
   </div>
 </div>
 <style>
+  .button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+  }
   .filter {
-    height: 800px;
+    max-height: 500px;
     /* border: 1px solid #777; */
     background-color: rgba(172, 172, 172, 0.7);
     border-radius: 4px;
