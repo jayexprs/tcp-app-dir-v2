@@ -4,4 +4,8 @@ declare module 'astro:db' {
 		"Products",
 		{"name":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"name","collection":"Products","primaryKey":true}},"description":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"description","collection":"Products","primaryKey":false,"optional":false}},"icon":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"icon","collection":"Products","primaryKey":false,"optional":false}}}
 	>;
+	export const Apps: import("@astrojs/db/runtime").Table<
+		"Apps",
+		{"id":{"type":"number","schema":{"unique":false,"deprecated":false,"name":"id","collection":"Apps","primaryKey":true}},"name":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"name","collection":"Apps","primaryKey":false,"optional":false}},"description":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"description","collection":"Apps","primaryKey":false,"optional":false}},"productId":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"productId","collection":"Apps","primaryKey":false,"optional":false,"references":{"type":"text","schema":{"unique":false,"deprecated":false,"name":"name","collection":"Products","primaryKey":true}}}},"isAdmin":{"type":"boolean","schema":{"optional":false,"unique":false,"deprecated":false,"name":"isAdmin","collection":"Apps"}},"isFavorite":{"type":"boolean","schema":{"optional":false,"unique":false,"deprecated":false,"name":"isFavorite","collection":"Apps"}}}
+	>;
 }

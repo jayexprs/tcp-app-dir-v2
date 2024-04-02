@@ -1,26 +1,28 @@
 ---
 import { db, Products } from "astro:db";
-import SiteLayout from "../layouts/SiteLayout.astro";
-const products = await db.select.from(Products);
+import LandingLayout from "../layouts/LandingLayout.astro";
+const products = await db.select().from(Products);
+import LayoutSwitcher from "../components/LayoutSwitcher.astro";
 ---
 
-<SiteLayout>
+<LandingLayout>
   <main>
     <h1>App Cards v. Product Cards</h1>
-
-    {
-      products.map((product) => (
-        <ul class="product-ul">
+    <LayoutSwitcher />
+    <ul class="product-ul">
+      {
+        products.map(({ name }) => (
           <li>
-            <span class="product-name">{product.name}</span>
+            <span class="product-name">{name}</span>
           </li>
-        </ul>
-      ))
-    }
+        ))
+      }
+    </ul>
   </main>
-</SiteLayout>
+</LandingLayout>
 <style>
   main {
+    margin: 20px;
   }
   ul {
     list-style: none;

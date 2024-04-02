@@ -11,21 +11,16 @@ const Products = defineTable({
 
 const Apps = defineTable({
   columns: {
+    id: column.number( {primaryKey: true} ),
     name: column.text(),
     description: column.text(),
     productId: column.text( {references: () => Products.columns.name}),
-    isAdmin: column.boolean()
-  }
-});
-
-const FavoriteApps = defineTable({
-  columns: {
-    app: column.text( { references: () => Apps.columns.name}),
+    isAdmin: column.boolean(),
     isFavorite: column.boolean()
   }
 });
 
 // https://astro.build/db/config
 export default defineDb({
-  tables: { Products }
+  tables: { Products, Apps }
 });

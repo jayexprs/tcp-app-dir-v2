@@ -1,6 +1,7 @@
 [
   {
     "name": "Platform Admin",
+    "description": "",
     "icon": "ac_unit",
     "apps": [
       {
@@ -19,10 +20,12 @@
   },
   {
     "name": "ACFR Statement Builder",
+    "description": "Build consolidated financial reports",
+    "icon": "",
     "apps": [
       {
         "name": "ACFR Statement Builder",
-        "description": "Build your financial reports"
+        "description": "Build consolidated financial reports"
       },
       {
         "name": "ACFR Admin",
@@ -53,6 +56,7 @@
   },
   {
     "name": "Payments",
+    "description": "Manage payment transactions",
     "icon": "payments",
     "apps": [
       {
@@ -72,6 +76,7 @@
   },
   {
       "name": "Energov",
+      "description": "A complete permitting and licensing solution",
       "icon": "architecture",
       "apps": [
         {
@@ -90,6 +95,7 @@
   },
   {
       "name": "Employee Access",
+      "description": "Employee time off, pay, and other HR-related information and features",
       "icon": "badge",
       "apps": [
         {

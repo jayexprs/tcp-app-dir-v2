@@ -1,7 +1,12 @@
 ---
+import { db, eq, Products, Apps } from "astro:db";
 const { product } = Astro.props;
 const productPath =
   "/stacked-cards/" + product.name.toLowerCase().split(" ").join("-");
+const apps = await db
+  .select()
+  .from(Apps)
+  .where(eq(Apps.productId, product.name));
 ---
 
 {
