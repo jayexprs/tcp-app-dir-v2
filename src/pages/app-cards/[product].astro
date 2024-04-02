@@ -1,7 +1,6 @@
 ---
 import data from "../../data.json";
 import AppInCard from "../../components/AppInCard.astro";
-import AppCardLayout from "../../layouts/AppCardLayout.astro";
 export function getStaticPaths() {
   return data.map((product) => {
     return {
@@ -13,33 +12,31 @@ export function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<AppCardLayout>
-  <main>
-    <div style="display: flex; gap: 5px;">
-      <div>
-        <a href="/app-cards">
-          <forge-icon name="arrow_back" external id="app-icon-preview"
-          ></forge-icon>
-        </a>
-      </div>
-      <div style="align-self: center; font-weight: bold;">App Directory</div>
+<main>
+  <div style="display: flex; gap: 5px;">
+    <div>
+      <a href="/app-cards">
+        <forge-icon name="arrow_back" external id="app-icon-preview"
+        ></forge-icon>
+      </a>
     </div>
-    <div
-      style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
-    >
-      <h1 style="forge-typography-title">{product.name}</h1>
-      <p style="forge-typography--subtitle1">
-        This describes the {product.name} product and its apps.
-      </p>
-      {
-        product.apps.map((app) => (
-          <AppInCard
-            name={app.name}
-            description={app.description}
-            isAdmin={app.isAdmin}
-          />
-        ))
-      }
-    </div>
-  </main>
-</AppCardLayout>
+    <div style="align-self: center; font-weight: bold;">App Directory</div>
+  </div>
+  <div
+    style="display: grid; gap: 18px; border-radius: 5px; background-color: #fefefe; padding: 15px;"
+  >
+    <h1 style="forge-typography-title">{product.name}</h1>
+    <p style="forge-typography--subtitle1">
+      This describes the {product.name} product and its apps.
+    </p>
+    {
+      product.apps.map((app) => (
+        <AppInCard
+          name={app.name}
+          description={app.description}
+          isAdmin={app.isAdmin}
+        />
+      ))
+    }
+  </div>
+</main>
