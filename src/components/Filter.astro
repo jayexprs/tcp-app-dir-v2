@@ -43,7 +43,7 @@ import data from "../data.json";
     padding: 10px;
   }
   .collapse {
-    width: 40px;
+    width: 32px;
   }
   .hide {
     display: none;
@@ -51,8 +51,11 @@ import data from "../data.json";
 </style>
 <script>
   const filter = document.getElementById("filter-button");
+  const filterContent = document.getElementsByClassName("filter-content");
   filter?.addEventListener("click", () => {
-    filter?.classList.add("collapse");
-    console.log("clicked!");
+    filter?.classList.toggle("collapse");
+    for (let i = 0; i < filterContent.length; i++) {
+      filterContent[i].classList.toggle("hide");
+    }
   });
 </script>
