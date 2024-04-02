@@ -3,15 +3,19 @@ import data from "../data.json";
 ---
 
 <div class="filter">
-  <div>
+  <div style="display: flex; justify-items: center;">
+    <forge-icon name="filter_alt" external id="filter-button"></forge-icon>
+  </div>
+
+  <div class="filter-content">
     <input type="checkbox" id="favorites" name="favorites" />
     <label for="favorites">Favorites</label>
   </div>
-  <div>
+  <div class="filter-content">
     <input type="checkbox" id="admin" name="admin" />
     <label for="favorites">Admin</label>
   </div>
-  <div>
+  <div class="filter-content">
     <p style="margin-bottom: 6px; font-weight: 500; font-size: 1.1rem">
       Filter by product
     </p>
@@ -30,12 +34,25 @@ import data from "../data.json";
 <style>
   .filter {
     height: 800px;
-    border: 1px solid #777;
+    /* border: 1px solid #777; */
     background-color: rgba(172, 172, 172, 0.7);
     border-radius: 4px;
     display: grid;
     align-content: start;
     gap: 8px;
-    padding: 20px;
+    padding: 10px;
+  }
+  .collapse {
+    width: 40px;
+  }
+  .hide {
+    display: none;
   }
 </style>
+<script>
+  const filter = document.getElementById("filter-button");
+  filter?.addEventListener("click", () => {
+    filter?.classList.add("collapse");
+    console.log("clicked!");
+  });
+</script>
