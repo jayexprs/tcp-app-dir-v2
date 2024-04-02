@@ -26,7 +26,7 @@ const apps = await db
           <forge-icon-button dense>
             <button type="button">
               <forge-icon
-                name="add_circle_outline"
+                name="bookmark_border"
                 external
                 id="app-icon-preview"
               />
@@ -37,22 +37,22 @@ const apps = await db
       <div style="display: grid; align-content: center">
         <p>{app.description}</p>
       </div>
-      <div style="display: flex; gap: 12px">
-        <forge-chip style="" dense hasLeading>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <forge-badge style="" dense hasLeading theme="info-secondary">
           <forge-icon
             slot="leading"
             name={product.icon ? product.icon : "app_registration"}
             external
           />
           {product.name}
-        </forge-chip>
-        <forge-chip
+        </forge-badge>
+        <forge-badge
           class={app.isAdmin ? "show" : "hide"}
-          style="border-color: black; color: black"
           dense
+          theme="info-primary"
         >
           Admin app
-        </forge-chip>
+        </forge-badge>
       </div>
     </div>
   ))
