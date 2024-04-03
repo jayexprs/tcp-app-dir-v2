@@ -146,5 +146,16 @@
         "description": "Track applicants to open positions"
       }
     ]
+  },
+  {
+    "name": "Time & Attendance",
+    "icon": "",
+    "description": "Complete solution for timekeeping, scheduling, and export to payroll. Integrating product with ERP Payroll.",
+    "apps": [
+      {
+        "name": "Time & Attendance",
+        "description": "Complete solution for timekeeping, scheduling, and export to payroll. Integrating product with ERP Payroll."
+      }
+    ]
   }
 ]
